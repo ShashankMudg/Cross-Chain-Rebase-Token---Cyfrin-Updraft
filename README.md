@@ -1,66 +1,52 @@
-## Foundry
+# Cross-Chain Rebase Token (Learning Project)
 
-**Foundry is a blazing fast, portable and modular toolkit for Ethereum application development written in Rust.**
+Welcome! 👋  
+This repository is a **work-in-progress** as I build and experiment with a **Cross-Chain Rebase Token**. I'm actively learning smart contract security and architecture via [**Cyfrin's educational content**](https://www.cyfrin.io/) — expect frequent updates, refactoring, and experiments.
 
-Foundry consists of:
+---
 
--   **Forge**: Ethereum testing framework (like Truffle, Hardhat and DappTools).
--   **Cast**: Swiss army knife for interacting with EVM smart contracts, sending transactions and getting chain data.
--   **Anvil**: Local Ethereum node, akin to Ganache, Hardhat Network.
--   **Chisel**: Fast, utilitarian, and verbose solidity REPL.
+## 🚧 Project Status
 
-## Documentation
+✅ **In Development & Learning Phase**  
+I’m currently focused on:
 
-https://book.getfoundry.sh/
+- 📈 Rebase token mechanics (similar to AMPL)
+- 🌉 Cross-chain messaging research (LayerZero, Chainlink CCIP, etc.)
+- 🛡️ Security patterns and vulnerabilities
+- 🧪 Unit testing and fuzzing with Foundry
+- 🔧 Contract modularity and extensibility
 
-## Usage
+---
 
-### Build
+## 🧠 Learning Goals
 
-```shell
-$ forge build
-```
+This repo helps me explore and apply:
 
-### Test
+- Foundry toolkit: `forge`, `cast`, `anvil`, `Test`
+- Secure contract design (pull over push, checks-effects-interactions, etc.)
+- ERC20, Cross chain tokens, Chainlink CCIP
+- Advanced DeFi tokenomics like rebasing and supply elasticity
+- Cross-chain bridge patterns & pitfalls
 
-```shell
-$ forge test
-```
+---
 
-### Format
+## 🗂 Folder Structure
 
-```shell
-$ forge fmt
-```
-
-### Gas Snapshots
-
-```shell
-$ forge snapshot
-```
-
-### Anvil
-
-```shell
-$ anvil
-```
-
-### Deploy
-
-```shell
-$ forge script script/Counter.s.sol:CounterScript --rpc-url <your_rpc_url> --private-key <your_private_key>
-```
-
-### Cast
-
-```shell
-$ cast <subcommand>
-```
-
-### Help
-
-```shell
-$ forge --help
-$ anvil --help
-$ cast --help
-```
+```bash
+.
+├── src/                # Core smart contracts
+│   └── Rebase_Token.sol 
+│   └── RebaseTokenPool.sol
+│   └── Vault.sol
+│   └── Interfaces 
+│       └── IRebase_Token.sol       
+├── script/             # Deployment and helper scripts
+│ 
+├── test/               # Foundry unit and integration tests
+│   └── CrossChainRebase.t.sol
+│   └── RebaseToken.t.sol
+├── lib/                # External libraries (via forge install)
+├── .env                # Environment variables (RPCs, private keys)
+├── foundry.toml        # Foundry configuration
+└── README.md
+└── remappings.txt
